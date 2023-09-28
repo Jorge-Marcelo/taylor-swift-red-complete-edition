@@ -1,0 +1,131 @@
+/*
+Autor: Jorge Marcelo
+Data de Criação: 27/09/2023
+Github: https://github.com/Jorge-Marcelo
+Linkedin: https://www.linkedin.com/in/jorge-marcelo-067a5017b/
+Instagram: https://www.instagram.com/10_stronger/
+Threads: https://www.threads.net/@10_stronger
+*/
+
+a {
+color: white;
+text-decoration: none;
+font-size: 1.2em;
+}
+
+a:hover {
+color: rgb(133, 0, 0);
+transition: all 0.3s ease-in;
+}
+
+/*Configuração do cabeçalho*/
+#header {
+box-sizing: border-box;
+height: 50px;
+padding: 1rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+background: rgb(0, 0, 0);
+font-family: "Heebo", sans-serif;
+font-weight: bold;
+position: fixed;
+top: 0;
+width: 100%;
+border-bottom: 3px solid rgb(131, 0, 0);
+z-index: 100000000;
+}
+
+/*Configuração de cada item da lista*/
+#menu {
+display: flex;
+list-style: none;
+gap: 1rem;
+list-style: none;
+}
+
+/*Escondendo o botão do menu em telas fora do Mobile*/
+#btn-mobile {
+display: none;
+}
+
+/*Configuração caso a tela seja mobile*/
+@media (max-width: 1320px) {
+li {
+border-bottom: 3px solid rgb(255, 0, 0);
+}
+
+#menu {
+display: block;
+position: absolute;
+width: 100%;
+top: 50px;
+right: 0;
+background-color: rgb(0, 0, 0);
+transition: 0.6s;
+z-index: 100000000;
+height: 0px;
+visibility: hidden; /*Escondendo o menu caso a classe não esteja atica*/
+overflow-y: hidden; /*Escondendo o scroll vertical caso a classe não esteja ativa*/
+}
+
+/*Classe active para para fazer os itens do menu descerem */
+#nav.active #menu {
+height: calc(100vh - 70px); /*O menu vai descer caso a classe esteja ativa*/
+visibility: visible;
+overflow-y: auto;
+}
+#menu a {
+margin: 10px;
+}
+
+a {
+margin-bottom: 5px;
+}
+/*Configurações do botão Mobile*/
+#btn-mobile {
+display: flex;
+padding: 0.5rem 1rem;
+font-size: 1rem;
+border: none;
+background: none;
+cursor: pointer;
+gap: 0.5rem;
+}
+
+/*Criando Menu Hamburguer*/
+#hamburger {
+border-top: 5px solid rgb(255, 0, 0);
+width: 30px;
+}
+
+/*Criando os outros traços do menu*/
+#hamburger::after,
+#hamburger::before {
+content: "";
+display: block;
+width: 30px;
+height: 5px;
+background-color: rgb(255, 0, 0);
+margin-top: 5px;
+transition: 0.3s;
+position: relative;
+}
+
+/*Escondendo o traço do meio*/
+#nav.active #hamburger {
+border-top: transparent;
+}
+
+/*Rotacionando e mudando a posição do traço debaixo*/
+#nav.active #hamburger::after {
+transform: rotate(-135deg);
+margin-top: -5px;
+}
+
+/*Rotacionando e mudando a posição do traço cima*/
+#nav.active #hamburger::before {
+transform: rotate(135deg);
+margin-top: -5px;
+}
+}

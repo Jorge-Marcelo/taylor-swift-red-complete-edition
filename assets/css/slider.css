@@ -1,0 +1,152 @@
+/*
+Autor: Jorge Marcelo
+Data de Criação: 27/09/2023
+Github: https://github.com/Jorge-Marcelo
+Linkedin: https://www.linkedin.com/in/jorge-marcelo-067a5017b/
+Instagram: https://www.instagram.com/10_stronger/
+Threads: https://www.threads.net/@10_stronger
+*/
+
+/*Ocultando scrool do navegador horizontal*/
+body {
+overflow-x: hidden;
+}
+
+/*Container do slider*/
+.content {
+width: 100%;
+display: block;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow-x: hidden;
+}
+
+/*Container da imagem*/
+.imgSlider {
+border: 3px solid #6b0000;
+}
+
+/*Removendo input radio*/
+input {
+display: none;
+}
+
+/*Container das miniaturas*/
+.navegação {
+display: grid;
+grid-template-columns: repeat(5, 100px);
+gap: 5px;
+}
+
+/*Miniaturas*/
+.miniaturaSlider {
+width: 100px;
+height: 100px;
+border: 3px solid #6b0000;
+margin: 6px;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.5s;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+/*Classe extra das miniaturas*/
+.miniSlider {
+width: 100px;
+height: 100px;
+}
+
+/*Container das imagens speradas para funcionamento do slider*/
+.slides {
+display: flex;
+width: 500%;
+height: 100%;
+overflow-x: hidden;
+}
+
+/*Configuração da trancisão*/
+.slide {
+width: 20%;
+transition: 0.6s;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+overflow-x: hidden;
+}
+
+/*Chamada para as imagens*/
+#slide1:checked ~ .s1 {
+margin-left: 0%;
+}
+
+#slide2:checked ~ .s1 {
+margin-left: -20%;
+}
+
+#slide3:checked ~ .s1 {
+margin-left: -40%;
+}
+
+#slide4:checked ~ .s1 {
+margin-left: -60%;
+}
+
+#slide5:checked ~ .s1 {
+margin-left: -80%;
+}
+
+@media (max-width: 580px) {
+.imgSlider {
+width: 450px;
+}
+}
+@media (max-width: 600px) {
+.imgSlider {
+width: 400px;
+}
+}
+
+@media (max-width: 480px) {
+.imgSlider {
+width: 390px;
+}
+}
+
+@media (max-width: 440px) {
+.imgSlider {
+width: 360px;
+}
+}
+
+@media (max-width: 383px) {
+.imgSlider {
+width: 300px;
+}
+}
+
+@media (max-width: 560px) {
+.navegação {
+display: grid;
+grid-template-columns: repeat(4, 100px);
+gap: 5px;
+}
+}
+
+@media (max-width: 460px) {
+.navegação {
+display: grid;
+grid-template-columns: repeat(3, 100px);
+gap: 5px;
+}
+}
+
+@media (max-width: 350px) {
+.navegação {
+display: grid;
+grid-template-columns: repeat(2, 100px);
+gap: 5px;
+}
+}

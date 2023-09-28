@@ -1,0 +1,64 @@
+/*
+Autor: Jorge Marcelo
+Data de Criação: 27/09/2023
+Github: https://github.com/Jorge-Marcelo
+Linkedin: https://www.linkedin.com/in/jorge-marcelo-067a5017b/
+Instagram: https://www.instagram.com/10_stronger/
+Threads: https://www.threads.net/@10_stronger
+*/
+
+/*Configurações do botão*/
+.container-theme {
+position: absolute;
+top: 9px;
+right: 20px;
+background-color: #111;
+border-radius: 50px;
+cursor: pointer;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 23px;
+width: 49px;
+transform: scale(1.5);
+border: 2px solid red;
+}
+
+/*Configurações do circulo*/
+.circle {
+background-color: #fff;
+border-radius: 50%;
+position: absolute;
+top: 0px;
+left: 26px;
+height: 19px;
+width: 19px;
+transition: transform 0.2s linear;
+}
+
+/*scondendo o checkbox*/
+.checkbox {
+opacity: 0;
+}
+
+/*Alterando a posição do circulo quando ele for checado pelo checkbox*/
+.checkbox:checked + .container-theme .circle {
+transform: translateX(-24px);
+}
+
+/*Definindo cor e posição dos icones de sol e lua*/
+.fa-moon {
+color: #0f1ef1;
+margin-left: 5px;
+}
+
+.fa-sun {
+color: #f39c12;
+margin-right: 4px;
+}
+
+/*ChangeColorr*/
+
+body.light-mode {
+background-color: #cdb29e;
+}

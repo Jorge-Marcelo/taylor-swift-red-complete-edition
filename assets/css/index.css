@@ -1,0 +1,160 @@
+/*
+Autor: Jorge Marcelo
+Data de Criação: 27/09/2023
+Github: https://github.com/Jorge-Marcelo
+Linkedin: https://www.linkedin.com/in/jorge-marcelo-067a5017b/
+Instagram: https://www.instagram.com/10_stronger/
+Threads: https://www.threads.net/@10_stronger
+*/
+
+/*Google Fonts*/
+/*Abel*/
+@import url("https://fonts.googleapis.com/css2?family=Abel&display=swap");
+
+/*Heebo*/
+@import url("https://fonts.googleapis.com/css2?family=Heebo&display=swap");
+
+/*Configurações Globis*/
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: all 0.3s ease-in;
+}
+
+/*Corpo da pagina e logo*/
+body {
+background-color: rgb(29, 0, 0);
+}
+.logo {
+margin-top: 70px;
+}
+
+/*Tag Principal e sessões*/
+main {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 10px;
+}
+
+section {
+display: flex;
+flex-direction: column;
+margin: 15px;
+align-items: center;
+justify-content: center;
+}
+
+.section-one {
+display: grid;
+grid-template-columns: repeat(3, 500px);
+gap: 20px;
+}
+
+.section-two {
+display: grid;
+grid-template-columns: repeat(2, 500px);
+gap: 20px;
+}
+
+.img {
+border: #972d2f 3px solid;
+}
+
+.section-three {
+display: grid;
+grid-template-columns: repeat(3, 500px);
+grid-template-rows: 2, 1fr;
+gap: 20px;
+}
+
+.section-four {
+display: grid;
+grid-template-columns: repeat(3, 500px);
+gap: 20px;
+}
+
+/*Textos*/
+h1 {
+font-size: 4rem;
+color: #972d2f;
+position: relative;
+margin: 20px;
+text-align: center;
+font-weight: 900;
+}
+
+h1::after {
+content: "";
+position: absolute;
+bottom: -5px;
+left: 50%;
+transform: translateX(-50%);
+width: 400px;
+height: 7px;
+border-radius: 10px;
+background-color: #972d2f;
+margin-bottom: -10px;
+}
+
+h2 {
+font-family: "Abel", sans-serif;
+font-size: 3em;
+color: #972d2f;
+text-align: center;
+font-weight: 900;
+margin-top: 10px;
+}
+
+p {
+font-family: "Abel", sans-serif;
+font-size: 2em;
+color: #972d2f;
+margin: 20px;
+text-align: center;
+font-weight: 900;
+}
+
+/*Rodape*/
+footer {
+box-sizing: border-box;
+height: 100px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background: rgb(0, 0, 0);
+font-family: "Heebo", sans-serif;
+font-weight: bold;
+width: 100%;
+border-bottom: 3px solid rgb(131, 0, 0);
+border-top: 3px solid rgb(131, 0, 0);
+z-index: 100000000;
+}
+
+.final {
+width: 100%;
+margin-bottom: -4px;
+}
+
+/*Classes de redes sociais*/
+.social {
+background: transparent;
+border: 2px solid rgb(255, 0, 0);
+background-color: white;
+transition: transform 0.3s ease-in-out;
+border-radius: 100%;
+margin: 0 7px;
+width: 50px;
+height: 50px;
+cursor: pointer;
+}
+
+.social:hover {
+background-color: rgb(255, 0, 0);
+border: 2px solid rgb(255, 255, 255);
+transition: all 1s ease-in;
+transform: rotateY(360deg);
+}
