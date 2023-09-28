@@ -28,9 +28,13 @@ background-color: rgb(29, 0, 0);
 overflow-x: scroll;
 scrollbar-width: none;
 -ms-overflow-style: none;
+overflow-x: hidden;
+overflow-x: none;
 }
 body::-webkit-scrollbar {
 display: none;
+overflow-x: hidden;
+overflow-x: none;
 }
 
 .logo {
