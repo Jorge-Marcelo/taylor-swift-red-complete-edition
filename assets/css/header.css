@@ -65,8 +65,9 @@ background-color: rgb(0, 0, 0);
 transition: 0.6s;
 z-index: 100000000;
 height: 0px;
-visibility: hidden; /*Escondendo o menu caso a classe não esteja atica*/
-overflow-y: hidden; /*Escondendo o scroll vertical caso a classe não esteja ativa*/
+visibility: hidden;
+overflow-y: hidden;
+overflow-x: hidden;
 }
 
 /*Classe active para para fazer os itens do menu descerem */
