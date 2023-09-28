@@ -24,10 +24,17 @@ overflow-x: hidden;
 overflow-x: none;
 }
 
-/*Corpo da pagina e logo*/
+/*Corpo da pagina e logo e remoção do scrool do eixo x */
 body {
 background-color: rgb(29, 0, 0);
+overflow-x: scroll;
+scrollbar-width: none;
+-ms-overflow-style: none;
 }
+body::-webkit-scrollbar {
+display: none;
+}
+
 .logo {
 margin-top: 70px;
 }
