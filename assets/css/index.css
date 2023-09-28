@@ -20,11 +20,9 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 transition: all 0.3s ease-in;
-overflow-x: hidden;
-overflow-x: none;
 }
 
-/*Corpo da pagina e logo e remoção do scrool do eixo x */
+/*Corpo da pagina e logo e remoção do scrool do eixo x*/
 body {
 background-color: rgb(29, 0, 0);
 overflow-x: scroll;
