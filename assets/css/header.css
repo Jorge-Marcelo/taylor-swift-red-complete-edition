@@ -10,7 +10,6 @@ Threads: https://www.threads.net/@10_stronger
 a {
 color: white;
 text-decoration: none;
-font-size: 1.2em;
 }
 
 a:hover {
@@ -18,114 +17,171 @@ color: rgb(133, 0, 0);
 transition: all 0.3s ease-in;
 }
 
-/*Configuração do cabeçalho*/
-#header {
-box-sizing: border-box;
-height: 50px;
-padding: 1rem;
+.logo {
+margin-top: 20px;
+}
+
+/*Barra de Navegação*/
+header {
+height: 60px;
 display: flex;
 align-items: center;
 justify-content: space-between;
-background: rgb(0, 0, 0);
-font-family: "Heebo", sans-serif;
-font-weight: bold;
-position: fixed;
-top: 0;
+font-family: "Abel", sans-serif;
+font-size: 1.2em;
 width: 100%;
-border-bottom: 3px solid rgb(131, 0, 0);
-z-index: 100000000;
+border-top: 3px solid rgb(255, 0, 0);
+border-bottom: 3px solid rgb(255, 0, 0);
+position: fixed;
+z-index: 1000000000;
+background: #1f0000;
+margin-top: -10px;
+font-weight: 900;
 }
 
-/*Configuração de cada item da lista*/
+nav ul li.itens-nav {
+position: relative;
+width: auto;
+margin: 0 10px 16px;
+text-align: center;
+}
+
+/*Configurações de tamanhos de texto e cores dos itens da lista  */
+nav ul li a {
+color: rgb(255, 255, 255);
+font-size: 1.2em;
+text-decoration: none;
+transition: 0.5s ease-in;
+margin-top: 10px;
+margin-left: 10px;
+}
+
+nav ul li a::after {
+width: 0%;
+opacity: 0;
+content: "";
+left: 0;
+bottom: 5;
+}
+
+nav ul li a:hover::after {
+display: block;
+margin: auto;
+content: "";
+bottom: 5px;
+height: 3px;
+border-radius: 10px;
+width: 100%;
+opacity: 1;
+background: linear-gradient(90deg, #470101, #ff0000, rgb(73, 5, 1));
+transition: all 0.5s ease;
+cursor: pointer;
+}
+
+/*Configurações do efeito de  passar o mouse*/
+
+nav ul li a:hover {
+background: linear-gradient(90deg, #ff0000, #490101, rgb(255, 0, 0));
+background-size: 400%;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+-webkit-background-clip: text;
+cursor: pointer;
+}
+
 #menu {
 display: flex;
 list-style: none;
-gap: 1rem;
-list-style: none;
+gap: 0.5rem;
 }
 
-/*Escondendo o botão do menu em telas fora do Mobile*/
+#menu a {
+display: block;
+text-decoration: none;
+}
+
 #btn-mobile {
 display: none;
 }
 
-/*Configuração caso a tela seja mobile*/
-@media (max-width: 1320px) {
-li {
-border-bottom: 3px solid rgb(255, 0, 0);
+/*-----------------------------------------------------------------------------------------------------------------*/
+/*Media Queries Barra de Navegação*/
+@media (max-width: 240px) {
+#menu li a {
+font-size: 0.6em;
+}
+
+#btn-mobile {
+background-repeat: no-repeat;
+}
+#header {
+height: 50px;
 }
 
 #menu {
-display: block;
 position: absolute;
+right: 0px;
+}
+}
+/*-----------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1550px) {
+#menu {
+display: block;
+position: fixed;
 width: 100%;
-top: 50px;
-right: 0;
-background-color: rgb(0, 0, 0);
+height: 100%;
+right: 0px;
+top: 30px;
+background-color: #360000;
 transition: 0.6s;
-z-index: 100000000;
-height: 0px;
+z-index: 1;
+transform: translateX(-100%);
 visibility: hidden;
-overflow-y: hidden;
+overflow: hidden;
 }
 
-/*Classe active para para fazer os itens do menu descerem */
+nav ul li a {
+color: white;
+font-size: 1.3em;
+}
+
 #nav.active #menu {
-height: calc(100vh - 70px); /*O menu vai descer caso a classe esteja ativa*/
+transform: translateX(0);
+height: 100%;
 visibility: visible;
-overflow-y: auto;
-}
-#menu a {
-margin: 10px;
+background-color: rgb(0, 0, 0);
+background-color: rgba(0, 0, 0, 0.9);
+overflow: hidden;
+margin-top: 30px;
 }
 
-a {
-margin-bottom: 5px;
+nav ul li a:hover {
+color: rgb(255, 0, 0);
+
+transition: 0.6s ease-in;
+border-radius: 10px;
 }
-/*Configurações do botão Mobile*/
+
 #btn-mobile {
 display: flex;
-padding: 0.5rem 1rem;
-font-size: 1rem;
+padding: 20px;
+margin-left: 20px;
+margin-top: 20px;
+background: transparent;
 border: none;
-background: none;
 cursor: pointer;
-gap: 0.5rem;
+background-image: url("../img/nav/nav.png");
+background-repeat: no-repeat;
 }
 
-/*Criando Menu Hamburguer*/
-#hamburger {
-border-top: 5px solid rgb(255, 0, 0);
-width: 30px;
-}
-
-/*Criando os outros traços do menu*/
-#hamburger::after,
-#hamburger::before {
-content: "";
-display: block;
-width: 30px;
-height: 5px;
-background-color: rgb(255, 0, 0);
-margin-top: 5px;
-transition: 0.3s;
-position: relative;
-}
-
-/*Escondendo o traço do meio*/
-#nav.active #hamburger {
-border-top: transparent;
-}
-
-/*Rotacionando e mudando a posição do traço debaixo*/
-#nav.active #hamburger::after {
-transform: rotate(-135deg);
-margin-top: -5px;
-}
-
-/*Rotacionando e mudando a posição do traço cima*/
-#nav.active #hamburger::before {
-transform: rotate(135deg);
-margin-top: -5px;
+#nav.active #btn-mobile {
+display: flex;
+padding: 15px;
+background: transparent;
+border: none;
+cursor: pointer;
+background-image: url("../img/nav/close.png");
+background-repeat: no-repeat;
 }
 }

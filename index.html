@@ -22,32 +22,31 @@ Threads: https://www.threads.net/@10_stronger
 <link rel='stylesheet' type='text/css' media='screen' href='assets/css/carrossel.css'>
 <link rel='stylesheet' type='text/css' media='screen' href='assets/css/theme-toogler.css'>
 <link rel='stylesheet' type='text/css' media='screen' href='assets/css/musicPlayerOne.css'>
+<link rel='stylesheet' type='text/css' media='screen' href='assets/css/musicPlayerTwo.css'>
 <link rel="shortcut icon" href="assets/img/Favicon/Logo-Icon.png" type="image/x-icon" />
 
 
 </head>
 <body id="home">
 
-<header id="header">
+<header>
+<!--Barra de Navegação-->
 
 <nav id="nav">
-
-<button id="btn-mobile">
-<span id="hamburger"></span>
+<button   id="btn-mobile" onclick="openNav()"></button>
 </button>
-
-
-<ul id="menu">
-<li><a href="#home">Home</a></li>
-<li><a href="#sobre">Sobre Tyalor Swift</a></li>
-<li><a href="#redS">Red Studio Version</a></li>
-<li><a href="#redT">Red World Tuor</a></li>
-<li><a href="#redTS">Red Taylor Version</a></li>
-<li><a href="#galeria">Galeria de Imagens</a></li>
-<li><a href="#musicas">Musicas</a></li>
-<li><a href="#fim">Creditos</a></li>
-</ul>
+<ul id="menu" role="menu">
+ <li class="itens-nav"><a href="#home" class="menu-item">Home</a></li>  
+ <li class="itens-nav"><a href="#sobre" class="menu-item">Sobre Tyalor Swift</a></li>  
+ <li class="itens-nav"><a href="#redS" class="menu-item">Red Studio Version</a></li>  
+ <li class="itens-nav"><a href="#redT" class="menu-item">Red World Tuor</a></li>  
+ <li class="itens-nav"><a href="#redTS" class="menu-item">Red Taylor Version</a></li>  
+ <li class="itens-nav"><a href="#galeria" class="menu-item">Galeria de Imagens</a></li>  
+ <li class="itens-nav"><a href="#music" class="menu-item">Musicas</a></li> 
+ <li class="itens-nav"><a href="#video" class="menu-item">Video</a></li>  
+ <li class="itens-nav"><a href="#fim" class="menu-item">Creditos</a></li>  
 </nav>
+
 
 <aside>
 <input type="checkbox" class="checkbox" id="change" />
@@ -61,14 +60,12 @@ Threads: https://www.threads.net/@10_stronger
 <main>
 
 <img src="assets/img/iinicio/Logo.png" class="logo">
-<h2>EM DESEMVOLVIMENTO 80%</h2>
 <h2>A EXPERINCIA DEFINITIVA DO ALBUM RED</h2>
-<img src="assets/img/iinicio/Taylor Swift 2.png" class="inicial">
+<img src="assets/img/iinicio/Taylor Swift 2.png" class="inicial" id="sobre">
 
 
-
-<section>
-<h1 class="titulos" id="sobre">Sobre Taylor Swift</h1>
+<section class="scroll-anim" scroll-anim="top">
+<h1 class="titulos">Sobre Taylor Swift</h1>
 <p>
 Taylor Alison Swift é uma cantora, compositora, atriz, 
 diretora e roteirista norte-americana. Suas composições 
@@ -83,9 +80,11 @@ pessoais, tem recebido ampla cobertura mediática e elogios críticos
 <img src="assets/img/Primeira Section/Taylor3.png"  class="img">
 </figure>
 
+<span id="redS"></span>
+
 
 <section>
-<h1 class="titulos" id="redS">Red Studio Version</h1>
+<h1 class="titulos">Red Studio Version</h1>
 <p>
 Red é o quarto álbum de estúdio da cantora e compositora estadunidense 
 Taylor Swift, lançado pela gravadora Big Machine Records no dia 22 de 
@@ -96,13 +95,17 @@ e ainda respondeu às perguntas dos fãs.
 </p>
 </section>
 
+
+
 <figure class="section-two">
 <img src="assets/img/Segunda Section/RedStudio1.png" class="img">
 <img src="assets/img/Segunda Section/RedStudio2.png" class="img">
 </figure>
 
+<span id="redT"></span>
+
 <section>
-<h1 class="titulos" id="redT">Red World Tuor</h1>
+<h1 class="titulos">Red World Tuor</h1>
 <p>
 The Red Tour foi a terceira turnê mundial da cantora estadunidense 
 Taylor Swift, em suporte de seu quarto álbum de estúdio Red. A turnê 
@@ -120,8 +123,10 @@ Oceania, Europa e finalizando na Ásia.
 <img src="assets/img/Terceira Section/Tuor6.png" class="img">
 </figure>
 
+<span id="redTS"></span>
+
 <section>
-<h1 class="titulos"  id="redTS">Red Taylor´s  Version</h1>
+<h1 class="titulos"  >Red Taylor´s  Version</h1>
 <p>
 Red (Taylor's Version) é o segundo álbum regravado da cantora e 
 compositora estadunidense Taylor Swift, lançado em 12 de novembro 
@@ -136,8 +141,11 @@ quarto álbum de estúdio de Swift, Red.
 <img src="assets/img/Quarta Section/RVersion3.png" class="img">
 </figure>
 
+<span id="galeria"></span>
+
+
 <section>
-<h1 class="titulos" id="galeria">Galeria de Imagens</h1>
+<h1 class="titulos">Galeria de Imagens</h1>
 <p>
 
 GALERIA 1<br>
@@ -163,7 +171,7 @@ Clique nas imagens para visualizar
 <img src="assets/img/Quinta Section/Galeria9.png" class="miniatura">
 </figure>
 
-<section>
+<section class="scroll-anim" scroll-anim="top">
 <p>
 GALERIA 2<br>
 Clique nas miniaturas para visualizar
@@ -234,12 +242,16 @@ Clique nas setas para visualizar
 <button onclick="dot(4)"></button>
 </section>
 
+<span id="music"></span>
+
+
 <button id="prev" onclick="prev()"> &lt; </button>
 <button id="next" onclick="next()"> &gt; </button>
 </section>
 
+<span id="music"></span>
 
-<h1 class="titulos" id="musicas">Musicas</h1>
+<h1 class="titulos ">Musicas</h1>
 <p>OUÇA O ALBUM RED STUDIO VERSION</p>
 
 <section class="player">
@@ -274,14 +286,14 @@ Clique nas setas para visualizar
 </article>
 </section>
 
-</main>
+
 
 
 <figure>
 <img src="assets/img/Footer/Final.png" class="final" id="fim">
 </figure>
 
-<footer>
+<footer >
 <a href="">Made by: Jorge Marcelo</a>
 <table>
 <tr>
@@ -318,6 +330,7 @@ Clique nas setas para visualizar
 <script src='assets/js/carroussel.js'></script>
 <script src='assets/js/themeSwitcher.js'></script>
 <script src='assets/js/musicPlayerOne.js'></script>
+<script src='assets/js/musicPlayerTwo.js'></script>
 <script src='assets/js/social.js'></script>
 
 

@@ -7,15 +7,25 @@ Instagram: https://www.instagram.com/10_stronger/
 Threads: https://www.threads.net/@10_stronger
 */
 
-/*Comunicação do JS com HTML com o DOM*/
 const btnMobile = document.getElementById("btn-mobile");
 
-//Função que vai realizar a ação do menu
 function toggleMenu(event) {
-if (event.type === "touchstart") event.preventDefault(); //Definindo para o menu ficar desativdo
-const nav = document.getElementById("nav"); //Selecionando o conteudo da nav
-nav.classList.toggle("active"); //Toggle adicione caso tenha remova caso não tenha (ou seja adicone a classe active)
+if (event.type === "touchstart") event.preventDefault();
+const nav = document.getElementById("nav");
+nav.classList.toggle("active");
+const active = nav.classList.contains("active");
+event.currentTarget.setAttribute("aria-expanded", active);
+if (active) {
+event.currentTarget.setAttribute("aria-label", "Fechar Menu");
+} else {
+event.currentTarget.setAttribute("aria-label", "Abrir Menu");
+}
 }
 
-btnMobile.addEventListener("click", toggleMenu); //Adicionando evento de click
-btnMobile.addEventListener("touchstart", toggleMenu); //Adicionando vento de touch do Mobile
+btnMobile.addEventListener("click", toggleMenu);
+btnMobile.addEventListener("touchstart", toggleMenu);
+const menuItems = document.querySelectorAll(".menu-item");
+
+menuItems.forEach((item) => {
+item.addEventListener("click", toggleMenu);
+});
